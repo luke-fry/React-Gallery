@@ -8,7 +8,6 @@ function PhotoList() {
   const [modalID, setModalID] = useState(-1);
 
   const handleModal = (id) => {
-    console.log("Modal ID:", id);
     setModalID(id);
   };
 
@@ -24,6 +23,7 @@ function PhotoList() {
                 title={photo.title}
               />
             </button>
+
             {modalID === photo.id ? (
               <Modal id={photo.id} className="modal">
                 <div className="modal-content">
